@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEVORIX</title>
+</head>
+
+<body style="background:black;color:#00f7ff;font-family:Arial;text-align:center;padding-top:50px;">
+
+<h1>NEVORIX ONLINE 🚀</h1>
+
+<input id="input" placeholder="Fale com a NEVORIX" style="padding:10px;width:80%;margin-top:20px;">
+<br><br>
+
+<button onclick="responder()" style="padding:10px;">Enviar</button>
+
+<p id="resposta"></p>
+
+<script>
+function responder(){
+  let texto = document.getElementById("input").value.toLowerCase();
+  let resposta = "";
+
+  if(texto.includes("oi")){
+    resposta = "Olá Miguel 👊";
+  }
+  else if(texto.includes("hora")){
+    resposta = "Agora são " + new Date().toLocaleTimeString();
+  }
+  else if(texto.includes("data")){
+    resposta = "Hoje é " + new Date().toLocaleDateString();
+  }
+  else{
+    resposta = "Não entendi.";
+  }
+
+  document.getElementById("resposta").innerText = resposta;
+}
+</script>
+
+</body>
+</html>
